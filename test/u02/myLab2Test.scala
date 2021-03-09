@@ -54,10 +54,29 @@ class myLab2Test {
   assertEquals(9, comp(_-1, _*2)(5))
 }
 
-@Test def testCompGen(): Unit = {
+@Test def testCompGen() {
   assertEquals(9, compGen[Int](_-1, _*2)(5))
   assertEquals("casa1ciao", compGen[String](_+"ciao", _+"1")("casa"))
 }
+
+  @Test def testFib() {
+    assertEquals(0, fib(0))
+    assertEquals(1,fib(1))
+    assertEquals(1,fib(2))
+    assertEquals(2,fib(3))
+    assertEquals(3,fib(4))
+    assertEquals(5,fib(5))
+  }
+
+  @Test def testFibTail() {
+      assertEquals(0,fibTail(0))
+      assertEquals(1,fibTail(1))
+      assertEquals(1,fibTail(2))
+      assertEquals(2,fibTail(3))
+      assertEquals(3,fibTail(4))
+      assertEquals(5,fibTail(5))
+  }
+
 
 
 }
