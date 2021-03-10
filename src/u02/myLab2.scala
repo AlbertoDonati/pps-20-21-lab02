@@ -55,4 +55,25 @@ object myLab2 extends {
       case _ => fibTail (n-1, acc2 ,acc1+acc2 )
     }
 
+  abstract class Shape
+  case class Rectangle(lenght:Double, height: Double) extends Shape
+  case class Circle(radius: Double) extends Shape
+  case class Square(side : Double) extends Shape
+
+  object myCalc {
+
+    def perimeter(myShape: Shape): Double = myShape match {
+      case Rectangle(length: Double, height: Double) => (length + height)*2
+      case Circle(radius: Double) => 2 * math.Pi * radius
+      case Square(side: Double) => 4 * side
+    }
+
+    def area(myShape: Shape): Double = myShape match {
+      case Rectangle(length: Double, height: Double) => (length*height)
+      case Circle(radius: Double) => math.Pi * (radius) * radius
+      case Square(side: Double) => side * side
+    }
+
+  }
+
 }

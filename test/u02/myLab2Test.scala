@@ -77,6 +77,19 @@ class myLab2Test {
       assertEquals(5,fibTail(5))
   }
 
+  @Test def perimeter() {
+    assertEquals(14,myCalc.perimeter(Rectangle(3,4)))
+    assertEquals(2*math.Pi*3,myCalc.perimeter(Circle(3)))
+    assertEquals(16,myCalc.perimeter(Square(4)))
+  }
+
+  @Test def area() {
+    assertEquals(12,myCalc.area(Rectangle(3,4)))
+    assertEquals(math.Pi*3*3,myCalc.area(Circle(3)))
+    assertEquals(16,myCalc.area(Square(4)))
+  }
+
+
 
 
 }
