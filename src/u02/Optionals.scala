@@ -1,6 +1,6 @@
 package u02
 
-object Optionals extends App {
+object Optionals extends App{
 
   sealed trait Option[A] // An Optional data type
   object Option {
@@ -21,6 +21,7 @@ object Optionals extends App {
       case Some(a) => f(a)
       case _ => None()
     }
+
   }
 
   import Option._
